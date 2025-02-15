@@ -1,0 +1,123 @@
+# README.md
+
+## Formatos Markdown (MD) para archivos README
+Markdown es un lenguaje de marcado ligero que se utiliza para formatear texto de manera sencilla. Es ampliamente utilizado en archivos `README.md` en proyectos de software para documentar información clave. 
+
+### **Principales elementos de Markdown:**
+- **Encabezados:** Se crean con `#` (Ejemplo: `# Título principal`).
+- **Negrita:** Se usa `**texto**` o `__texto__`.
+- **Cursiva:** Se usa `*texto*` o `_texto_`.
+- **Listas:**
+  - Listas no ordenadas: Se crean con `-`, `+` o `*`.
+  - Listas ordenadas: Se crean con números seguidos de `.` (Ejemplo: `1. Elemento`).
+- **Código en línea:** Se encierra el código entre comillas invertidas (`` `código` ``).
+- **Bloques de código:** Se encierran en triple tilde o comillas invertidas triples (
+```
+Ejemplo de código
+```
+).
+- **Enlaces:** `[Texto](URL)`.
+- **Imágenes:** `![Texto alternativo](URL)`.
+
+---
+
+## **Preguntas y respuestas**
+
+### **¿Para qué crees que se usan los operadores lógicos en programación?**
+Los operadores lógicos (`&&`, `||`, `!`) se utilizan para evaluar expresiones booleanas y tomar decisiones dentro del código. Se usan en estructuras de control como `if`, `while` y `for` para ejecutar acciones basadas en condiciones múltiples.
+
+### **¿Por qué es importante declarar correctamente el tipo de dato de una variable?**
+Es importante porque:
+1. **Optimiza el uso de memoria**, evitando desperdiciar recursos innecesarios.
+2. **Previene errores de tipo**, asegurando que las operaciones sean válidas.
+3. **Mejora el rendimiento del código**, ya que el compilador puede hacer optimizaciones más eficientes.
+
+---
+
+### **switch o if-else 
+en el programa de rangos de edad no es convinente usar switch
+ ya que no son valores exactos, ahi se trabaja con rango de edad**
+
+#### **1. Clasificación de edad (if-else)**
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Ingrese su edad: ");
+        int edad = int.Parse(Console.ReadLine());
+
+        if (edad < 12)
+            Console.WriteLine("Categoría: Niño");
+        else if (edad <= 17)
+            Console.WriteLine("Categoría: Adolescente");
+        else if (edad <= 59)
+            Console.WriteLine("Categoría: Adulto");
+        else
+            Console.WriteLine("Categoría: Adulto mayor");
+    }
+}
+```
+
+#### **2. Día de la semana (switch)**
+### **switch o if-else 
+ en los dias de la semana si usaremos swtich ya se que son valores constantes no tienen rango ni varian**
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Ingrese un número (1-7): ");
+        int dia = int.Parse(Console.ReadLine());
+
+        switch (dia)
+        {
+            case 1: Console.WriteLine("Lunes"); break;
+            case 2: Console.WriteLine("Martes"); break;
+            case 3: Console.WriteLine("Miércoles"); break;
+            case 4: Console.WriteLine("Jueves"); break;
+            case 5: Console.WriteLine("Viernes"); break;
+            case 6: Console.WriteLine("Sábado"); break;
+            case 7: Console.WriteLine("Domingo"); break;
+            default: Console.WriteLine("Número inválido"); break;
+        }
+    }
+}
+```
+
+#### **3. Verificación de acceso**
+### **switch o if-else
+ en el ultimo programa de validacion de usuario es mejor el if-else ya que permite
+ comparar multiples condiciones.**
+```csharp
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string usuarioCorrecto = "Jose";
+        string contraseñaCorrecta = "Progra1";
+
+        Console.Write("Ingrese su usuario: ");
+        string usuario = Console.ReadLine();
+
+        Console.Write("Ingrese su contraseña: ");
+        string contraseña = Console.ReadLine();
+
+        if (usuario == usuarioCorrecto && contraseña == contraseñaCorrecta)
+            Console.WriteLine("Bienvenido");
+        else if (usuario == usuarioCorrecto)
+            Console.WriteLine("Contraseña incorrecta");
+        else
+            Console.WriteLine("Usuario no registrado");
+    }
+}
+```
+
+---
+
